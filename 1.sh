@@ -65,8 +65,8 @@ echo -e "${jeshile} ┌───────────────────
 echo -e "${jeshile} │   Blocking SSH Connection   │ \e[0m"
 echo -e "${jeshile} └─────────────────────────────┘ \e[0m"
 echo " "
-sudo /sbin/iptables -I INPUT -s 119.249.54.71 -p tcp --dport ssh -j REJECT
-sudo /sbin/iptables -I INPUT -s 119.249.54.71 -p tcp --dport ssh -j REJECT
+sudo /sbin/iptables -I INPUT -s 1.10.213.78 -p tcp --dport ssh -j REJECT
+sudo /sbin/iptables -I INPUT -s 1.10.213.78 -p tcp --dport ssh -j REJECT
 sudo /sbin/iptables -I INPUT -s 38.30.65.218 -p tcp --dport ssh -j REJECT
 sudo /sbin/iptables -I INPUT -s 221.194.47.224 -p tcp --dport ssh -j REJECT
 sudo /sbin/iptables -I INPUT -s 218.65.30.38 -p tcp --dport ssh -j REJECT
