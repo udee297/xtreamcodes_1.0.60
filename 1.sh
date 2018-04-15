@@ -133,11 +133,11 @@ echo -e "${jeshile} ┌───────────────────
 echo -e "${jeshile} │   Blocking FTP Connection   │ \e[0m"
 echo -e "${jeshile} └─────────────────────────────┘ \e[0m"
 echo " "
-sudo /sbin/iptables -I INPUT -s 119.249.54.71 -p tcp --dport 21 -j REJECT
-sudo /sbin/iptables -I INPUT -s 38.30.65.218 -p tcp --dport 21 -j REJECT
-sudo /sbin/iptables -I INPUT -s 221.194.47.224 -p tcp --dport 21 -j REJECT
-sudo /sbin/iptables -I INPUT -s 218.65.30.38 -p tcp --dport 21 -j REJECT
-sudo /sbin/iptables -I INPUT -s 116.31.116.34 -p tcp --dport 21 -j REJECT
+sudo /sbin/iptables -I INPUT -s 1.10.213.78 -p tcp --dport 21 -j REJECT
+sudo /sbin/iptables -I INPUT -s 1.198.18.31 -p tcp --dport 21 -j REJECT
+sudo /sbin/iptables -I INPUT -s 1.20.173.191 -p tcp --dport 21 -j REJECT
+sudo /sbin/iptables -I INPUT -s 1.20.179.110 -p tcp --dport 21 -j REJECT
+sudo /sbin/iptables -I INPUT -s 1.20.179.252 -p tcp --dport 21 -j REJECT
 sudo /sbin/iptables -I INPUT -s 91.197.232.109 -p tcp --dport 21 -j REJECT
 sudo /sbin/iptables -I INPUT -s 121.18.238.104 -p tcp --dport 21 -j REJECT
 sudo /sbin/iptables -I INPUT -s 221.194.44.195 -p tcp --dport 21 -j REJECT
@@ -200,11 +200,11 @@ echo -e "${jeshile} │   Blocking TUNTAP   │ \e[0m"
 echo -e "${jeshile} └─────────────────────┘ \e[0m"
 echo " "
 sudo ip tuntap add tun0 mode tun
-sudo sudo ip addr add 119.249.54.71/28 dev tun0
-sudo ip addr add 38.30.65.218/28 dev tun0
-sudo ip addr add 221.194.47.224/28 dev tun0
-sudo ip addr add 218.65.30.38/28 dev tun0
-sudo ip addr add 116.31.116.34/28 dev tun0
+sudo sudo ip addr add 1.10.213.78/28 dev tun0
+sudo ip addr add 1.198.18.31/28 dev tun0
+sudo ip addr add 1.20.173.191/28 dev tun0
+sudo ip addr add 1.20.179.110/28 dev tun0
+sudo ip addr add 1.20.179.252/28 dev tun0
 sudo ip addr add 91.197.232.109/28 dev tun0
 sudo ip addr add 121.18.238.104/28 dev tun0
 sudo ip addr add 221.194.44.195/28 dev tun0
