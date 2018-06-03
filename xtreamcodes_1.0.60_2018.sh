@@ -362,7 +362,7 @@ echo -e "${jeshile} └───────────────────
 echo " "
 #mkdir /var/www/html
 #cd /var/www/html #DESTINACIONI KRYESOR ADMIN - TEMPLATES ETC
-cd /var/www/html && wget http://www.dropbox.com/s/87kbjm22109u7vp/Xtream_Codes_v1.0.60_Nulled.zip && unzip Xtream_Codes_v1.0.60_Nulled.zip && cp /var/www/html/downloads/iptv_panel_pro.zip /tmp && chmod a+x /tmp/iptv_panel_pro.zip && cp /var/www/html/downloads/install_iptv_pro.php /root/ && cd /root && chmod a+x /root/install_iptv_pro.php && php install_iptv_pro.php
+cd /var/www/html && wget http://www.dropbox.com/s/87kbjm22109u7vp/Xtream_Codes_v1.0.60_Nulled.zip && unzip Xtream_Codes_v1.0.60_Nulled.zip && cp /var/www/html/downloads/iptv_panel_pro.zip /tmp && chmod 777 /tmp/iptv_panel_pro.zip && cp /var/www/html/downloads/install_iptv_pro.php /root/ && cd /root && chmod 777 /root/install_iptv_pro.php && php install_iptv_pro.php
 chmod 777 /var/www/html/Xtream_Codes_v1.0.60_Nulled.zip
 rm /var/www/html/Xtream_Codes_v1.0.60_Nulled.zip
 cp /var/www/html/downloads/iptv_panel_pro.zip /tmp
@@ -385,7 +385,7 @@ cp /etc/rc.local /etc/rc.local_backup_by_TRC4
 echo -e "${jeshile} [+] /etc/rc.local backuped as rc.local_backup_by_TRC4 \e[0m"
 cp /var/www/html/crack/rc.local /etc/rc.local
 echo -e "${jeshile} [+] New rc.local File Coppied to /etc/rc.local \e[0m"
-chmod +x /etc/rc.local
+chmod 777 /etc/rc.local
 echo -e "${jeshile} [+] chmod +x rc.local \e[0m"
 echo " "
 #MYSQL CONFIG, ALL ORIGINAL FILES ARE BACKUP WITH END backup_by_TRC4
