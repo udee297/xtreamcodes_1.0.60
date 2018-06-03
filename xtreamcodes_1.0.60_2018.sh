@@ -366,7 +366,7 @@ cd /var/www/html && wget http://www.dropbox.com/s/87kbjm22109u7vp/Xtream_Codes_v
 chmod 777 /var/www/html/Xtream_Codes_v1.0.60_Nulled.zip
 rm /var/www/html/Xtream_Codes_v1.0.60_Nulled.zip
 cp /var/www/html/downloads/iptv_panel_pro.zip /tmp
-chmod a+x /tmp/iptv_panel_pro.zip
+chmod 777 /tmp/iptv_panel_pro.zip
 #cp /var/www/html/downloads/install_iptv_pro.php /root/ #FSHIHET AUTOMATIKISHT MBAS INSTALIMIT
 #cd /root
 #chmod a+x /root/install_iptv_pro.php
