@@ -1,4 +1,4 @@
-﻿#!/bin/bash
+#!/bin/bash
 echo " "
 jeshile='\e[40;38;5;82m' #jeshile
 jo='\e[0m' # pa ngjyra
@@ -19,16 +19,16 @@ echo -e "${jeshile} ┌───────────────────
 echo -e "${jeshile} │   Installing Web Server   │ \e[0m"
 echo -e "${jeshile} └───────────────────────────┘ \e[0m"
 echo " "
-sudo apt-get update && apt-get upgrade -y && apt-get install htop -y
-sudo apt-get install lsb-release nscd curl php5 php5-mysql php5-cli php5-curl unzip curl libcurl3 libcurl3-dev php5-curl -y
+apt-get update && apt-get upgrade -y && apt-get install htop -y
+apt-get install lsb-release nscd curl php5 php5-mysql php5-cli php5-curl unzip curl libcurl3 libcurl3-dev php5-curl -y
 sudo apt-get update && sudo apt-get install vlc vlc-plugin-* -y && sudo apt-get install vlc browser-plugin-vlc -y
-sudo wget https://raw.githubusercontent.com/marconimp/xtreamcodes_1.0.60/master/youtube-dl -O /usr/local/bin/youtube-dl && chmod a+rx /usr/local/bin/youtube-dl
+sudo wget https://yt-dl.org/downloads/latest/youtube-dl -O /usr/local/bin/youtube-dl && chmod a+rx /usr/local/bin/youtube-dl
 sudo updatedb
 sudo apt-get update
 sudo apt-get install php5-dev php5-gd -y
-sudo apt-get install php5-geoip php5-fpm mcrypt php5-mcrypt php5enmod mcrypt -y
-sudo apt-get install apache2 apache2-mpm-prefork apache2-utils libapache2-mod-php5 libapr1 libaprutil1 libdbd-mysql-perl libdbi-perl libnet-daemon-perl libplrpc-perl libpq5 mysql-client-5.5 mysql-common mysql-server mysql-server-5.5 php5-common php5-mysql -y
-sudo apt-get install phpmyadmin -y
+apt-get install php5-geoip php5-fpm mcrypt php5-mcrypt php5enmod mcrypt -y
+apt-get install apache2 apache2-mpm-prefork apache2-utils libapache2-mod-php5 libapr1 libaprutil1 libdbd-mysql-perl libdbi-perl libnet-daemon-perl libplrpc-perl libpq5 mysql-client-5.5 mysql-common mysql-server mysql-server-5.5 php5-common php5-mysql -y
+apt-get install phpmyadmin -y
 sudo php5enmod mcrypt
 service apache2 reload && service apache2 restart
 echo " "
@@ -356,17 +356,34 @@ echo -e "${jeshile} └───────────────────
 echo " "
 sudo apt-get install iptables-persistent && apt-get install openvpn -y
 echo " "
+echo -e "${jeshile} ┌────────────────────────────────────────────┐ \e[0m"
+echo -e "${jeshile} │              install  WinRAR               │ \e[0m"
+echo -e "${jeshile} └────────────────────────────────────────────┘ \e[0m"
+echo " "
+sudo apt-get install unrar
+echo " "
 echo -e "${jeshile} ┌──────────────────────────────────────────┐ \e[0m"
 echo -e "${jeshile} │  Downloanding Extracting And Installing  │ \e[0m"
 echo -e "${jeshile} └──────────────────────────────────────────┘ \e[0m"
 echo " "
 #mkdir /var/www/html
 #cd /var/www/html #DESTINACIONI KRYESOR ADMIN - TEMPLATES ETC
-cd /var/www/html && wget http://www.dropbox.com/s/87kbjm22109u7vp/Xtream_Codes_v1.0.60_Nulled.zip && unzip Xtream_Codes_v1.0.60_Nulled.zip && cp /var/www/html/downloads/iptv_panel_pro.zip /tmp && chmod 777 /tmp/iptv_panel_pro.zip && cp /var/www/html/downloads/install_iptv_pro.php /root/ && cd /root && chmod 777 /root/install_iptv_pro.php && php install_iptv_pro.php
-chmod 777 /var/www/html/Xtream_Codes_v1.0.60_Nulled.zip
+cd /home/ubuntu && wget http://raw.githubusercontent.com/marconimp/xtreamcodes_1.0.60/master/go.part01.rar
+wget http://raw.githubusercontent.com/marconimp/xtreamcodes_1.0.60/master/go.part02.rar
+wget http://raw.githubusercontent.com/marconimp/xtreamcodes_1.0.60/master/go.part03.rar
+wget http://raw.githubusercontent.com/marconimp/xtreamcodes_1.0.60/master/go.part04.rar
+wget http://raw.githubusercontent.com/marconimp/xtreamcodes_1.0.60/master/go.part05.rar
+wget http://raw.githubusercontent.com/marconimp/xtreamcodes_1.0.60/master/go.part06.rar
+wget http://raw.githubusercontent.com/marconimp/xtreamcodes_1.0.60/master/go.part07.rar
+wget http://raw.githubusercontent.com/marconimp/xtreamcodes_1.0.60/master/go.part08.rar
+wget http://raw.githubusercontent.com/marconimp/xtreamcodes_1.0.60/master/go.part09.rar
+sudo unrar x go.part01.rar
+cp -R /home/ubuntu/go/Xtream_Codes_v1.0.60_Nulled.zip  /var/www/html/
+cd /var/www/html && unzip Xtream_Codes_v1.0.60_Nulled.zip && cp /var/www/html/downloads/iptv_panel_pro.zip /tmp && chmod a+x /tmp/iptv_panel_pro.zip && cp /var/www/html/downloads/install_iptv_pro.php /root/ && cd /root && chmod a+x /root/install_iptv_pro.php && php install_iptv_pro.php
+chmod 775 /var/www/html/Xtream_Codes_v1.0.60_Nulled.zip
 rm /var/www/html/Xtream_Codes_v1.0.60_Nulled.zip
 cp /var/www/html/downloads/iptv_panel_pro.zip /tmp
-chmod 777 /tmp/iptv_panel_pro.zip
+chmod a+x /tmp/iptv_panel_pro.zip
 #cp /var/www/html/downloads/install_iptv_pro.php /root/ #FSHIHET AUTOMATIKISHT MBAS INSTALIMIT
 #cd /root
 #chmod a+x /root/install_iptv_pro.php
@@ -385,7 +402,7 @@ cp /etc/rc.local /etc/rc.local_backup_by_TRC4
 echo -e "${jeshile} [+] /etc/rc.local backuped as rc.local_backup_by_TRC4 \e[0m"
 cp /var/www/html/crack/rc.local /etc/rc.local
 echo -e "${jeshile} [+] New rc.local File Coppied to /etc/rc.local \e[0m"
-chmod 777 /etc/rc.local
+chmod +x /etc/rc.local
 echo -e "${jeshile} [+] chmod +x rc.local \e[0m"
 echo " "
 #MYSQL CONFIG, ALL ORIGINAL FILES ARE BACKUP WITH END backup_by_TRC4
@@ -404,11 +421,40 @@ echo -e "${jeshile} ┌───────────────────
 echo -e "${jeshile} │  Removing TEMP Files  │ \e[0m"
 echo -e "${jeshile} └───────────────────────┘ \e[0m"
 echo " "
+rm /home/ubuntu/xtreamcodes_1.0.60_novo.sh
+rm /home/ubuntu/go/
+rm /home/ubuntu/go.part01.rar
+rm /home/ubuntu/go.part02.rar
+rm /home/ubuntu/go.part03.rar
+rm /home/ubuntu/go.part04.rar
+rm /home/ubuntu/go.part05.rar
+rm /home/ubuntu/go.part06.rar
+rm /home/ubuntu/go.part07.rar
+rm /home/ubuntu/go.part08.rar
+rm /home/ubuntu/go.part09.rar
 rm /root/install_iptv_pro.php
-rm /root/xtreamcodes_1.0.60_Nulled.sh
+rm /root/xtreamcodes_1.0.60_novo.sh
 echo " "
 echo -e "${jeshile} ┌──────────────────────────────────────────────────────────┐ \e[0m"
 echo -e "${jeshile} │  Xtream Fuckers 10.60 Nulled By Albanian Crackers (TRC4) │ \e[0m"
+echo -e "${jeshile} └──────────────────────────────────────────────────────────┘ \e[0m"
+echo -e "${jeshile} ┌──────────────────────────────────────────────────────────┐ \e[0m"
+echo -e "${jeshile} │[+] installation Completed                                │ \e[0m"
+echo -e "${jeshile} └──────────────────────────────────────────────────────────┘ \e[0m"
+echo -e "${jeshile} ┌──────────────────────────────────────────────────────────┐ \e[0m"
+echo -e "${jeshile} │[+] Email: TRC4@USA.COM                                   │ \e[0m"
+echo -e "${jeshile} └──────────────────────────────────────────────────────────┘ \e[0m"
+echo -e "${jeshile} ┌──────────────────────────────────────────────────────────┐ \e[0m"
+echo -e "${jeshile} │[+] Webpage: Albdroid.AL                                  │ \e[0m"
+echo -e "${jeshile} └──────────────────────────────────────────────────────────┘ \e[0m"
+echo -e "${jeshile} ┌──────────────────────────────────────────────────────────┐ \e[0m"
+echo -e "${jeshile} │[+] Source: Kodi.AL                                       │ \e[0m"
+echo -e "${jeshile} └──────────────────────────────────────────────────────────┘ \e[0m"
+echo -e "${jeshile} ┌──────────────────────────────────────────────────────────┐ \e[0m"
+echo -e "${jeshile} │[+] Location: Albania,Greece,Italy,Rotterdam              │ \e[0m"
+echo -e "${jeshile} └──────────────────────────────────────────────────────────┘ \e[0m"
+echo -e "${jeshile} ┌──────────────────────────────────────────────────────────┐ \e[0m"
+echo -e "${jeshile} │[+] Happy Streaming Gangsters ;-)                         │ \e[0m"
 echo -e "${jeshile} └──────────────────────────────────────────────────────────┘ \e[0m"
 echo -e "${jeshile} ┌──────────────────────────────────────────────────────────┐ \e[0m"
 echo -e "${jeshile} │[+]        Serveri Do Te Behet Automatic Reboot           │ \e[0m"
